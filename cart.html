@@ -1,0 +1,66 @@
+<div class="cart-nav" onclick="window.location.href='cart.html'">
+  🛒 Cart (<span id="cart-count">0</span>)
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{background:#f4fbff;padding:40px;}
+    .container{max-width:1200px;margin:auto;display:grid;grid-template-columns:2fr 1fr;gap:30px;}
+    .cart-items,.summary{background:white;padding:25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,0.1);}
+    .cart-item{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee;padding:20px 0;}
+    .cart-item img{width:90px;height:90px;border-radius:10px;object-fit:cover;}
+    .item-info{flex:1;padding:0 20px;}
+    .qty-box button{padding:6px 12px;border:none;background:#0077b6;color:white;border-radius:5px;cursor:pointer;}
+    .checkout-btn{display:block;width:100%;padding:15px;background:#0077b6;color:white;text-align:center;text-decoration:none;border-radius:12px;margin-top:20px;font-weight:600;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cart-items">
+      <h2>Your Cart</h2>
+
+      <div class="cart-item">
+        <img src="local.jpeg">
+        <div class="item-info">
+          <h3>500ml Everyday Water Bottle</h3>
+          <p>₹49</p>
+        </div>
+        <div class="qty-box">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <img src="premium.jpg">
+        <div class="item-info">
+          <h3>950ml Sparkling Water Bottle</h3>
+          <p>₹299</p>
+        </div>
+        <div class="qty-box">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </div>
+    </div>
+<a href="index.html" class="checkout-btn">Continue Shopping</a>
+    <div class="summary">
+      <h2>Order Summary</h2>
+      <p>Subtotal: ₹348</p>
+      <p>Shipping: ₹50</p>
+      <h3>Total: ₹398</h3>
+
+      <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+    </div>
+  </div>
+</body>
+</html>
