@@ -1,406 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Water Bottles </title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signature Bottles</title>
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#f0f8ff;color:#333;line-height:1.6;}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-/* HEADER */
-header{
-    background:linear-gradient(90deg,#b4d8f5,#13a9fa);
-    color:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 40px;
-    position:relative;
-}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo img{width:80px;height:80px;border-radius:10px;}
-nav a{color:white;text-decoration:none;margin-left:25px;font-weight:500;transition:0.3s;}
-nav a:hover{color:#00ffff;}
-.cart-nav{
-    position:relative;
-    cursor:pointer;
-    margin-left:25px;
-    font-weight:600;
-    transition:0.3s;
-}
-.cart-nav:hover{color:#00ffff;}
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
 
-/* HERO */
+    html{
+      scroll-behavior:smooth;
+    }
 
-.hero .overlay{
-background:rgba(255,255,255,0.15);
-backdrop-filter:blur(15px);
-padding:40px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,0.3);
-}
-.hero h1{font-size:50px;color:white;margin-bottom:20px;}
-.hero p{font-size:20px;color:white;margin-bottom:30px;}
-.btn{background:linear-gradient(90deg,#00c3ff,#0056b3);padding:12px 25px;border-radius:25px;color:white;text-decoration:none;font-weight:600;cursor:pointer;transition:0.3s;}
-.btn:hover{background:white;color:#0056b3;}
-.hero{
-    height:80vh;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    overflow:hidden;
-}
+    body{
+      background:linear-gradient(180deg,#eef9ff,#dff4ff,#f8fcff);
+      color:#333;
+      overflow-x:hidden;
+    }
 
-/* VIDEO BACKGROUND */
-.hero video{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    z-index:-1;
-}
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 8%;
+      background:rgba(255,255,255,0.2);
+      backdrop-filter:blur(15px);
+      border-bottom:1px solid rgba(255,255,255,0.2);
+    }
 
-/* SECTIONS */
-section{padding:80px 10%;text-align:center;}
-.title{text-align:center;font-size:38px;margin-bottom:50px;color:#00457c;}
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
 
-/* PRODUCTS */
-.products{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
-.product-box{
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
-    border-radius:15px;
-    text-align:center;
-    width:220px;
-    box-shadow:0 8px 30px rgba(0,0,0,0.1);
-    padding:25px;
-    transition:0.3s;
-}
-.product-box:hover{transform:translateY(-8px);}
-.product-box img{width:120px;margin-bottom:15px;}
-.product-box button{margin-top:10px;}
+    .logo img{
+      width:65px;
+      height:65px;
+      border-radius:15px;
+      object-fit:cover;
+    }
 
-/* FEATURES */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;}
-.feature{background:rgba(255,255,255,0.15);backdrop-filter:blur(12px);padding:25px;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.1);}
-.feature h3{margin-bottom:10px;}
-.features + .feature{
-    margin-top:40px;
-}
+    .logo h2{
+      color:#00457c;
+      font-size:24px;
+      font-weight:700;
+    }
 
-/* GALLERY */
-.gallery{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:20px;
-}
-.gallery img{
-    width:100%;border-radius:15px;transition:0.3s;
-}
-.gallery img:hover{
-    transform:scale(1.05);
-}
-.gallery video{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:15px;
-    transition:0.3s;
-}
+    nav{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      flex-wrap:wrap;
+    }
 
-.gallery video:hover{
-    transform:scale(1.05);
-}
-.gallery img,
-.gallery video{
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
+    nav a{
+      text-decoration:none;
+      color:#00457c;
+      font-weight:500;
+      position:relative;
+      transition:0.3s;
+    }
 
-/* CONTACT */
-.contact{
-    text-align:center;
-}
-.contact p{
-    margin:10px 0;font-weight:500;
-}
-.contact a{
-    color:#0077b6;
-    text-decoration:none;
-    font-weight:600;
-}
+    nav a::after{
+      content:'';
+      position:absolute;
+      width:0;
+      height:2px;
+      left:0;
+      bottom:-5px;
+      background:#00bfff;
+      transition:0.3s;
+    }
 
-.contact a:hover,
-footer a:hover{
-    color:#00ffff;
-}
-.contact a,
-footer a{
-    color:white;
-    text-decoration:none;
-    font-weight:600;
-}
-/*cart-nav*/
-.cart-nav{
-  text-align:center;
-}
+    nav a:hover::after{
+      width:100%;
+    }
 
-/* FOOTER */
-footer{
-    background:linear-gradient(90deg,#00457c,#0077b6);color:white;text-align:center;padding:25px;
-}
+    nav a:hover{
+      color:#00a6ff;
+    }
 
-@media(max-width:768px){
-    header{flex-direction:column;gap:10px;padding:20px;}
-    .hero h1{font-size:40px;}
-    .products{flex-direction:column;align-items:center;}
-}
-.footer-social{
-margin-bottom:15px;
-}
+    .cart-nav{
+      background:#00bfff;
+      color:white;
+      padding:10px 18px;
+      border-radius:30px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
 
-.footer-social a{
-color:white;
-font-size:26px;
-margin:0 10px;
-transition:0.3s;
-}
+    .cart-nav:hover{
+      background:#008bd1;
+      transform:translateY(-3px);
+    }
 
-.footer-social a:hover{
-color:#00ffff;
-transform:scale(1.2);
-}
+    .hero{
+      height:100vh;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      overflow:hidden;
+    }
 
-/*whatsapp*/
-.whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-font-size:28px;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-text-decoration:none;
-box-shadow:0 6px 20px rgba(0,0,0,0.3);
-transition:0.3s;
-z-index:999;
-}
+    .hero video{
+      position:absolute;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      top:0;
+      left:0;
+      z-index:-2;
+    }
 
-.whatsapp:hover{
-transform:scale(1.1);
-}
+    .hero::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      top:0;
+      left:0;
+      background:linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0.2));
+      z-index:-1;
+    }
 
-/*social media*/
-.social-icons{
-margin-top:20px;
-}
+    .overlay{
+      background:rgba(255,255,255,0.12);
+      backdrop-filter:blur(20px);
+      padding:50px;
+      border-radius:25px;
+      border:1px solid rgba(255,255,255,0.2);
+      box-shadow:0 15px 40px rgba(0,0,0,0.2);
+      max-width:700px;
+    }
 
-.social-icons a{
-font-size:28px;
-margin:0 10px;
-color:#0077b6;
-transition:0.3s;
-}
+    .overlay h1{
+      font-size:60px;
+      color:white;
+      margin-bottom:20px;
+      text-shadow:0 5px 15px rgba(0,0,0,0.4);
+    }
 
-.social-icons a:hover{
-color:#00457c;
-transform:scale(1.2);
-}
+    .overlay p{
+      color:white;
+      font-size:20px;
+      margin-bottom:30px;
+    }
 
-/* ORDER POPUP */
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      border-radius:50px;
+      background:linear-gradient(135deg,#00c3ff,#0056b3);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+      border:none;
+      cursor:pointer;
+      transition:0.4s;
+      box-shadow:0 10px 25px rgba(0,123,255,0.3);
+    }
 
-.popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.6);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:2000;
-}
+    .btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 30px rgba(0,123,255,0.4);
+    }
 
-.popup-box{
-background:white;
-padding:30px;
-border-radius:15px;
-width:320px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
+    section{
+      padding:100px 8%;
+      text-align:center;
+    }
 
-.popup-box h2{
-margin-bottom:15px;
-color:#00457c;
-}
+    .title{
+      font-size:40px;
+      color:#00457c;
+      margin-bottom:60px;
+      position:relative;
+      display:inline-block;
+    }
 
-#order-summary{
-text-align:left;
-margin-bottom:20px;
-font-size:14px;
-}
+    .title::after{
+      content:'';
+      position:absolute;
+      width:70px;
+      height:4px;
+      background:#00bfff;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:-12px;
+      border-radius:10px;
+    }
 
-.cancel-btn{
-background:#ccc;
-color:black;
-margin-left:10px;
-}
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
 
-</style>
+    .product-box{
+      background:rgba(255,255,255,0.4);
+      backdrop-filter:blur(18px);
+      border-radius:20px;
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.4s;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .product-box:hover{
+      transform:translateY(-10px);
+      box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .product-box img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:15px;
+      margin-bottom:15px;
+    }
+
+    .product-box h3{
+      color:#00457c;
+      margin-bottom:10px;
+    }
+
+    .product-box p{
+      font-size:14px;
+      margin-bottom:15px;
+      line-height:1.6;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .feature{
+      background:rgba(255,255,255,0.35);
+      backdrop-filter:blur(15px);
+      border-radius:20px;
+      padding:30px;
+      transition:0.4s;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      min-height:220px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .feature:hover{
+      transform:translateY(-8px);
+      box-shadow:0 12px 25px rgba(0,0,0,0.12);
+    }
+
+    .feature h3{
+      color:#00457c;
+      margin-bottom:12px;
+      font-size:22px;
+    }
+
+    .feature p{
+      font-size:15px;
+      line-height:1.8;
+    }
+water-box {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 12px;
+      background: #f0f8ff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      
+    }
+
+    .water-box a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .water-box a:hover {
+      text-decoration: underline;
+    }
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .gallery img,
+    .gallery video{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+      border-radius:20px;
+      transition:0.4s;
+      box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .gallery img:hover,
+    .gallery video:hover{
+      transform:scale(1.04);
+      box-shadow:0 15px 30px rgba(0,195,255,0.25);
+    }
+
+    footer{
+      background:linear-gradient(135deg,#003566,#0077b6,#00b4d8);
+      color:white;
+      padding:50px 20px;
+      text-align:center;
+    }
+
+    .footer-social{
+      margin-bottom:20px;
+    }
+
+    .footer-social a{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      width:50px;
+      height:50px;
+      border-radius:50%;
+      background:rgba(255,255,255,0.1);
+      color:white;
+      margin:0 10px;
+      font-size:22px;
+      transition:0.3s;
+      text-decoration:none;
+    }
+
+    .footer-social a:hover{
+      transform:translateY(-5px);
+      background:rgba(255,255,255,0.2);
+    }
+
+    footer p{
+      margin-top:10px;
+    }
+
+    footer a{
+      color:white;
+      text-decoration:none;
+    }
+
+    .whatsapp{
+      position:fixed;
+      bottom:25px;
+      right:25px;
+      width:65px;
+      height:65px;
+      border-radius:50%;
+      background:#25D366;
+      color:white;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:30px;
+      text-decoration:none;
+      box-shadow:0 8px 20px rgba(0,0,0,0.2);
+      z-index:1000;
+    }
+
+    @media(max-width:768px){
+      header{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav{
+        justify-content:center;
+      }
+
+      .overlay{
+        padding:30px;
+      }
+
+      .overlay h1{
+        font-size:40px;
+      }
+
+      .overlay p{
+        font-size:16px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-<div class="logo">
-<img src="logo-removebg-preview.png" alt="" width="100" height="100">
-<div>Signature Bottles<br></div>
-</div>
-<nav>
-<a href="#">Home</a>
-<a href="#products">Products</a>
-<a href="#features">Blog</a>
-<a href="#contact">Contact</a>
-<div class="cart-nav" onclick="window.location.href='cart.html'">
-  🛒 Cart (<span id="cart-count">0</span>)
-</div>
-</nav>
-</header>
+  <header>
+    <div class="logo">
+      <img src="logo-removebg-preview.png" alt="">
+      <h2>Signature Bottles</h2>
+    </div>
 
-<section class="hero">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#features">Benefits</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+<a href="cart.html" class="Cart btn (0)">🛒 Cart</a>
+    </div>
+    </nav>
+  </header>
 
-<video autoplay muted loop playsinline>
-<source src="waterbottlebg.mp4" type="video/mp4">
-</video>
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="waterbottlebg.mp4" type="video/mp4">
+    </video>
 
-<div class="overlay">
-<h1>  Premium Water Bottles  </h1>
-<p>Nature's purity in every drop</p>
-<a class="btn" href="#products">Explore Bottles</a>
-</div>
-</section>
+    <div class="overlay">
+      <h1>Premium Water Bottles</h1>
+      <p>Nature's purity in every drop with premium packaging and refreshing taste.</p>
+      <a href="#products" class="btn">Explore Bottles</a>
+    </div>
+  </section>
 
-<section id="products">
-<h2 class="title">Eco-Friendly Water Bottles</h2>
-<div class="products">
-<div class="product-box" data-name="500ml Everyday Water Bottle" data-price="49" data-img="https://images.unsplash.com/photo-1598257009336-1ed0b20f3b95">
-<img src="local.jpeg">
-<h3>500ml</h3>
-<p>Perfect for quick refreshment</p>
-<button class="btn" onclick="addToCart(this)">Add to Cart - ₹49</button>
-</div>
-<div class="product-box" data-name="950ml Everyday Water Bottle" data-price="99" data-img="https://images.unsplash.com/photo-1598257009336-1ed0b20f3b95">
-<img src="bottle.jpeg">
-<h3>950ml</h3>
-<p>Everyday Mineral Hydration</p>
-<button class="btn" onclick="addToCart(this)">Add to Cart - ₹99</button>
-</div>
-<div class="product-box" data-name="500ml Sparkling Water Bottle" data-price="199" data-img="https://images.unsplash.com/photo-1598257009336-1ed0b20f3b95">
-<img src="luxerypackaging.jpg">
-<h3>500ml</h3>
-<p> Refreshing Premium Sparkling Water Bottle</p>
-<button class="btn" onclick="addToCart(this)">Add to Cart - ₹199</button>
-</div>
-<div class="product-box" data-name="950ml Sparkling Water Bottle" data-price="299" data-img="https://images.unsplash.com/photo-1598257009336-1ed0b20f3b95">
-<img src="premium.jpg">
-<h3>950ml</h3>
-<p>Prefect for Premium Class Sparkling Water Bottle</p>
-<button class="btn" onclick="addToCart(this)">Add to Cart - ₹299</button>
-</div>
-</div>
-</section>
+  <section id="products">
+    <h2 class="title">Eco-Friendly Bottles</h2>
 
-<section id="features">
-<h2 class="title">Benefits of signature water</h2>
-<div class="features">
-<div class="feature"><h3>Natural Mineral Balance</h3><p>Carefully filtered water enriched with essential minerals.</p></div>
-<div class="feature"><h3>Advanced Purification</h3><p>Multi-stage purification ensures the highest quality.</p></div>
-<div class="feature"><h3>Eco Friendly Packaging</h3><p>Recyclable bottles designed to protect the environment.</p></div>
-<div class="feature"><h3>Fresh Taste</h3><p>Crystal clear water with refreshing natural taste.</p></div>
-</div>
-<div class="feature"><p>Water is an inorganic compound with the chemical formula H2O. It is a transparent, tasteless, odorless, and nearly colorless chemical substance. It is the main constituent of Earth's streams, lakes, and oceans and the fluids of all known living organisms, in which it acts as a solvent. Water, being a polar molecule, undergoes strong intermolecular hydrogen bonding which is a large contributor to its physical and chemical properties.
-<a href="https://en.wikipedia.org/wiki/Water" target="_blank">
-  for more 
-</a></p></div>
-</section>
+    <div class="products">
+      <div class="product-box">
+        <img src="local.jpeg" alt="">
+        <h3>500ml Bottle</h3>
+        <p>Perfect for quick refreshment and daily hydration.</p>
+        <button class="btn">₹49</button>
+      </div>
 
-<section id="gallery">
-<h3 class="title"></h3>
+      <div class="product-box">
+        <img src="bottle.jpeg" alt="">
+        <h3>950ml Bottle</h3>
+        <p>Everyday hydration with clean and refreshing mineral water.</p>
+        <button class="btn">₹99</button>
+      </div>
 
-<div class="gallery">
+      <div class="product-box">
+        <img src="luxerypackaging.jpg" alt="">
+        <h3>500ml Sparkling</h3>
+        <p>Refreshing premium sparkling water for luxury taste.</p>
+        <button class="btn">₹199</button>
+      </div>
 
-<img src="glass.jpeg">
+      <div class="product-box">
+        <img src="premium.jpg" alt="">
+        <h3>950ml Sparkling</h3>
+        <p>Perfect for premium class sparkling water lovers.</p>
+        <button class="btn">₹299</button>
+      </div>
+      
+    </div>
+  </section>
 
-<img src="sparklingwater.jpg">
+  <section id="features">
+    <h2 class="title">Benefits of Signature Water</h2>
 
-<video autoplay muted loop playsinline>
-<source src="lemonwater.mp4" type="video/mp4">
-</video>
+    <div class="features">
+      <div class="feature">
+        <h3>Natural Mineral Balance</h3>
+        <p>Carefully filtered water enriched with essential minerals.</p>
+      </div>
 
-<video autoplay muted loop playsinline>
-<source src="drinkingwater.mp4" type="video/mp4">
-</video>
+      <div class="feature">
+        <h3>Advanced Purification</h3>
+        <p>Multi-stage purification ensures the highest quality.</p>
+      </div>
 
-<video autoplay muted loop playsinline>
-<source src="factorytour.mp4" type="video/mp4">
-</video>
+      <div class="feature">
+        <h3>Eco Friendly Packaging</h3>
+        <p>Recyclable bottles designed to protect the environment.</p>
+      </div>
 
-</div>
-</section>
-<section id="contact">
-<footer>
-<div class="footer-social">
+      <div class="feature">
+        <h3>Fresh Taste</h3>
+        <p>Crystal clear water with refreshing natural taste.</p>
+      </div>
+    </div>
+  </section>
 
-<a href="https://www.instagram.com/signaturebottles?igsh=MTdpY2Z1aTZvY2thdQ==" target="_blank">
-<i class="fa-brands fa-instagram"></i>
-</a>
+  <section id="blog">
+    <h2 class="title">Our Blog</h2>
 
-<a href="https://www.facebook.com/share/16ZkVjqg4t/" target="_blank">
-<i class="fa-brands fa-facebook"></i>
-</a>
+    <div class="features">
+      <div class="feature">
+        <h3>Why Drinking Water Matters</h3>
+        <p>Staying hydrated improves energy, digestion, skin health and overall body performance.</p>
+      </div>
 
-<a href="https://youtube.com/@signaturebottle?si=YIwBiEfZhF2cxqOH" target="_blank">
-<i class="fa-brands fa-youtube"></i>
-</a>
+      <div class="feature">
+        <h3>Benefits of Mineral Water</h3>
+        <p>Mineral water contains important nutrients like calcium, magnesium and potassium.</p>
+      </div>
 
-</div>
+      <div class="feature">
+        <h3>Eco Friendly Bottles</h3>
+        <p>Using recyclable bottles helps reduce plastic waste and keeps the environment clean.</p>
+      </div>
+ <div class="water-box">
+    <p>
+      <a href="https://en.wikipedia.org/wiki/Water" target="_blank">Water</a> is an inorganic compound with the chemical formula H<sub>2</sub>O. It is a transparent, tasteless, odorless, and nearly colorless chemical substance. It is the main constituent of Earth's streams, lakes, and oceans and the fluids of all known living organisms, in which it acts as a solvent. Water, being a polar molecule, undergoes strong intermolecular hydrogen bonding which is a large contributor to its physical and chemical properties.
+    </p>
+  </div>
 
-<p>Email: <a href="mailto:bottlesignature@gmail.com">bottlesignature@gmail.com</a></p>
+    </div>
+  </section>
 
-<p>© 2026 Signature Mineral Water. All Rights Reserved.</p>
+  <section id="gallery">
+    <div class="gallery">
+      <img src="glass.jpeg" alt="">
+      <img src="sparklingwater.jpg" alt="">
 
-</div>
-</footer>
-</section>
+      <video autoplay muted loop playsinline>
+        <source src="lemonwater.mp4" type="video/mp4">
+      </video>
 
+      <video autoplay muted loop playsinline>
+        <source src="drinkingwater.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
 
-<a href="https://wa.me/918178590227" class="whatsapp" target="_blank">
-💬
+  <footer id="contact">
+    <div class="footer-social">
+      <h1>We’re here to help with your orders, queries, and collaborations</h3><br><br>
+        <source media="(min-width: )" srcset="">
+        <img src="" alt="">
+      </picture>
+      <a href="https://www.instagram.com/signaturebottles/?__pwa=1"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/1AwF9FFMyg/"><i class="fab fa-facebook"></i></a>
+      <a href="https://youtube.com/@signaturebottles?si=ZURrfJwHCha9c03M"><i class="fab fa-youtube"></i></a>
 
-</a>
-<div id="order-popup" class="popup">
-<div class="popup-box">
+    </div>
 
-<h2>Confirm Your Order</h2>
+   <p>
+  Email:
+  <a href="mailto:bottlesignature@gmail.com" class="email-link">
+    bottlesignature@gmail.com
+  </a>
+</p>
 
-<div id="order-summary"></div>
+<style>
+  .email-link{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+  }
 
-<button class="btn" onclick="confirmOrder()">Confirm Order</button>
-<button class="btn cancel-btn" onclick="closePopup()">Cancel</button>
+  .email-link:hover{
+    color:#ffd166;
+    text-shadow:0 0 10px rgba(255,209,102,0.8);
+  }
+</style>
+    <p>© 2026 Signature Mineral Water. All Rights Reserved.</p>
+  </footer>
 
-</div>
-</div>
+  <a href="https://wa.me/918178590227" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
 </body>
 </html>
